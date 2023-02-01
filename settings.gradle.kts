@@ -22,6 +22,6 @@ KMP App with targets:
     - iOS with SwiftUI
     - JVM Desktop with Jetpack Compose
  */
-include("sentry-samples:kmp-app:shared")
-include("sentry-samples:kmp-app:androidApp")
-include("sentry-samples:kmp-app:desktopApp")
+//include("sentry-samples:kmp-app:shared")
+//include("sentry-samples:kmp-app:androidApp")
+//include("sentry-samples:kmp-app:desktopApp")
