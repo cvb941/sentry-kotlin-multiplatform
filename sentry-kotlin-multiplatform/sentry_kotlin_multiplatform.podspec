@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
     spec.name                     = 'sentry_kotlin_multiplatform'
-    spec.version                  = '0.0.3'
+    spec.version                  = '0.0.4'
     spec.homepage                 = 'https://github.com/getsentry/sentry-kotlin-multiplatform'
     spec.source                   = { :http=> ''}
     spec.authors                  = ''
@@ -8,11 +8,11 @@ Pod::Spec.new do |spec|
     spec.summary                  = 'Official Sentry SDK Kotlin Multiplatform'
     spec.vendored_frameworks      = 'build/cocoapods/framework/sentry_kotlin_multiplatform.framework'
     spec.libraries                = 'c++'
-    spec.ios.deployment_target = '9.0'
-    spec.osx.deployment_target = '10.10'
-    spec.tvos.deployment_target = '9.0'
-    spec.watchos.deployment_target = '2.0'
-    spec.dependency 'Sentry', '~> 7.31.5'
+    spec.ios.deployment_target = '11.0'
+    spec.osx.deployment_target = '10.13'
+    spec.tvos.deployment_target = '11.0'
+    spec.watchos.deployment_target = '4.0'
+    spec.dependency 'Sentry', '~> 8.1.0'
                 
     spec.pod_target_xcconfig = {
         'KOTLIN_PROJECT_PATH' => ':sentry-kotlin-multiplatform',

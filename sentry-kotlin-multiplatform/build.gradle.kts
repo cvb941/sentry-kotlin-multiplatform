@@ -153,12 +153,12 @@ kotlin {
             summary = "Official Sentry SDK Kotlin Multiplatform"
             homepage = "https://github.com/getsentry/sentry-kotlin-multiplatform"
 
-            pod("Sentry", "~> 7.31.5")
+            pod("Sentry", "~> 8.1.0")
 
-            ios.deploymentTarget = "9.0"
-            osx.deploymentTarget = "10.10"
-            tvos.deploymentTarget = "9.0"
-            watchos.deploymentTarget = "2.0"
+            ios.deploymentTarget = "11.0"
+            osx.deploymentTarget = "10.13"
+            tvos.deploymentTarget = "11.0"
+            watchos.deploymentTarget = "4.0"
         }
     }
 
