@@ -5,13 +5,26 @@ plugins {
     kotlin("native.cocoapods")
     id("com.android.library")
     `maven-publish`
+    id("com.vanniktech.maven.publish") version "0.24.0"
+}
+
+publishing {
+    repositories {
+        maven {
+            url = uri("https://maven.pkg.github.com/cvb941/sentry-kotlin-multiplatform")
+            credentials {
+                username = project.findProperty("gpr.user") as String? ?: System.getenv("GITHUB_ACTOR")
+                password = project.findProperty("gpr.key") as String? ?: System.getenv("GITHUB_TOKEN")
+            }
+        }
+    }
 }
 
 android {
-    compileSdk = 30
+    compileSdk = 33
     defaultConfig {
         minSdk = 16
-        targetSdk = 30
+        targetSdk = 33
     }
 
     buildTypes {

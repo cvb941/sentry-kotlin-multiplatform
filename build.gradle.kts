@@ -1,10 +1,7 @@
 import com.diffplug.spotless.LineEnding
-import com.vanniktech.maven.publish.MavenPublishPlugin
-import com.vanniktech.maven.publish.MavenPublishPluginExtension
 
 plugins {
     `maven-publish`
-    id("com.vanniktech.maven.publish") version "0.18.0"
     id("com.diffplug.spotless") version "6.7.2"
 }
 
@@ -63,16 +60,6 @@ subprojects {
                 val file = File(distributionFilePath)
                 if (!file.exists()) throw IllegalStateException("Distribution file: $distributionFilePath does not exist")
                 if (file.length() == 0L) throw IllegalStateException("Distribution file: $distributionFilePath is empty")
-            }
-        }
-
-        afterEvaluate {
-            apply<MavenPublishPlugin>()
-
-            configure<MavenPublishPluginExtension> {
-                // signing is done when uploading files to MC
-                // via gpg:sign-and-deploy-file (release.kts)
-                releaseSigningEnabled = false
             }
         }
     }
