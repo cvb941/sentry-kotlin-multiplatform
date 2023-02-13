@@ -56,4 +56,7 @@ open class SentryOptions {
 
     /** Hook that is triggered before a breadcrumb is sent to Sentry */
     var beforeBreadcrumb: ((Breadcrumb) -> Breadcrumb)? = null
+
+    /** Sets the traces sample rate. Can be anything between 0.0 and 1.0 or null (default), to disable it.*/
+    var tracesSampleRate: Double? = null
 }

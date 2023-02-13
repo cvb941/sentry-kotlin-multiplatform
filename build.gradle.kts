@@ -1,7 +1,6 @@
 import com.diffplug.spotless.LineEnding
 
 plugins {
-    `maven-publish`
     id("com.diffplug.spotless") version "6.7.2"
 }
 

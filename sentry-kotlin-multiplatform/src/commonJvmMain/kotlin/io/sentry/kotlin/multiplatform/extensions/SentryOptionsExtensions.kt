@@ -21,4 +21,5 @@ internal fun JvmSentryOptions.applyJvmBaseOptions(options: SentryOptions) {
     this.isDebug = options.debug
     this.sessionTrackingIntervalMillis = options.sessionTrackingIntervalMillis
     this.isEnableAutoSessionTracking = options.enableAutoSessionTracking
+    this.tracesSampleRate = options.tracesSampleRate
 }
